@@ -4,7 +4,7 @@ on: [push, pull_request]
 jobs:
   # Build job. Builds app for Android with Buildozer
   build-android:
-    name: Build for Android
+    name: Build
     runs-on: ubuntu-latest
 
     steps:
@@ -15,7 +15,7 @@ jobs:
         uses: ArtemSBulgakov/buildozer-action@v1
         id: buildozer
         with:
-          workdir: test_app
+          workdir: testapk.py
           buildozer_version: stable
 
       - name: Upload artifacts
